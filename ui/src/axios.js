@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const instance = axios.create({
-  baseURL: "annotator_api://annotator_api:5000",
+  baseURL: "http://localhost:5555",
   timeout: 3000,
 });
 
