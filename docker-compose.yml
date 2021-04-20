@@ -10,15 +10,16 @@ services:
       - "5555:5000"
     command: gunicorn -w 1 -b :5000 server:app
 
-  # annotator_ui:
-  #   container_name: annotator-ui
-  #   restart: always
-  #   build: ./ui
-  #   ports:
-  #     - "6776:8080"
-  #   # command: yarn serve
-  #   depends_on:
-  #     - annotator_api
+
+  annotator_web:
+    container_name: annotator-web
+    restart: always
+    build: ./ui
+    ports:
+      - "8081:8080"
+    command: yarn serve
+
+ 
   
   
   
